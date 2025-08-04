@@ -5,20 +5,20 @@
 class Backrest < Formula
   desc "Backrest is a web UI and orchestrator for restic backup."
   homepage "https://github.com/garethgeorge/backrest"
-  version "1.8.1"
+  version "1.9.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/garethgeorge/backrest/releases/download/v1.8.1/backrest_Darwin_x86_64.tar.gz"
-      sha256 "23b27fde1e128b39ff4c02b158362af6a38f67fd08a681e93dfe44f9f7a42ada"
+      url "https://github.com/garethgeorge/backrest/releases/download/v1.9.0/backrest_Darwin_x86_64.tar.gz"
+      sha256 "5d92c8c48bdd7761a48729446c89f2466f428b536dac61a8e76f5025cc50c462"
 
       def install
         bin.install "backrest"
       end
     end
     on_arm do
-      url "https://github.com/garethgeorge/backrest/releases/download/v1.8.1/backrest_Darwin_arm64.tar.gz"
-      sha256 "fc1919ce32451c2b95f99165a7ef1376d9275c36c01615373b7b7b85f0375659"
+      url "https://github.com/garethgeorge/backrest/releases/download/v1.9.0/backrest_Darwin_arm64.tar.gz"
+      sha256 "e1bbf27b9bab551d25d132a4b3ca0bda5b44fbc985451ca2ca6c5340e77454e0"
 
       def install
         bin.install "backrest"
@@ -29,8 +29,8 @@ class Backrest < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/garethgeorge/backrest/releases/download/v1.8.1/backrest_Linux_x86_64.tar.gz"
-        sha256 "db4d5a84308bcc4339ccbc47a5a52db7f818382e54296d8430f04264f2153689"
+        url "https://github.com/garethgeorge/backrest/releases/download/v1.9.0/backrest_Linux_x86_64.tar.gz"
+        sha256 "53a49327b67adaa2e74e0a713d0c0544c64ef2a5639f299efe172e129217b3b8"
 
         def install
           bin.install "backrest"
@@ -39,8 +39,8 @@ class Backrest < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/garethgeorge/backrest/releases/download/v1.8.1/backrest_Linux_armv6.tar.gz"
-        sha256 "8c05c9449112d96e2f610521174cd68b9eab084a1ed589cfd39d87a924e2f019"
+        url "https://github.com/garethgeorge/backrest/releases/download/v1.9.0/backrest_Linux_armv6.tar.gz"
+        sha256 "6215e436453e2fce41827d1cdf6fb6e47484f9c1ffa6ed0a767b3a45923b48e0"
 
         def install
           bin.install "backrest"
@@ -49,8 +49,8 @@ class Backrest < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/garethgeorge/backrest/releases/download/v1.8.1/backrest_Linux_arm64.tar.gz"
-        sha256 "a8a542bbd4ac8c16ab51078c4bab615a5cead8e63c70042c48b881264cfeeb6b"
+        url "https://github.com/garethgeorge/backrest/releases/download/v1.9.0/backrest_Linux_arm64.tar.gz"
+        sha256 "b6ecc1ac87aa2e14c8e6843a604a5390e4700745c7c1a2b34f9e5f2a54354bfa"
 
         def install
           bin.install "backrest"
