@@ -5,20 +5,20 @@
 class Backrest < Formula
   desc "Backrest is a web UI and orchestrator for restic backup."
   homepage "https://github.com/garethgeorge/backrest"
-  version "1.11.2"
+  version "1.12.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/garethgeorge/backrest/releases/download/v1.11.2/backrest_Darwin_x86_64.tar.gz"
-      sha256 "09fbb8b04f5cbb296c5afd852024d6685cbea0598bd0364dd9ba3c93df30f46f"
+      url "https://github.com/garethgeorge/backrest/releases/download/v1.12.0/backrest_Darwin_x86_64.tar.gz"
+      sha256 "429213519fb6802131580e0313fcb2fd197f7f62a3b36a3bbe756660a73e00f7"
 
       def install
         bin.install "backrest"
       end
     end
     on_arm do
-      url "https://github.com/garethgeorge/backrest/releases/download/v1.11.2/backrest_Darwin_arm64.tar.gz"
-      sha256 "3405a03e741ffef737ecc1473f66c1325a6bde8d55d74b4b78fcbee0770f326a"
+      url "https://github.com/garethgeorge/backrest/releases/download/v1.12.0/backrest_Darwin_arm64.tar.gz"
+      sha256 "9de51efab9d3bc88650dedc3ab63cdfd69faad3adc3049a97dfc81cc160b831a"
 
       def install
         bin.install "backrest"
@@ -29,31 +29,34 @@ class Backrest < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/garethgeorge/backrest/releases/download/v1.11.2/backrest_Linux_x86_64.tar.gz"
-        sha256 "35b3ff9835ac77ee6d2986310a4f169418bea10c038351b88917438a23cd16f9"
+        url "https://github.com/garethgeorge/backrest/releases/download/v1.12.0/backrest_Linux_x86_64.tar.gz"
+        sha256 "df6ab22e0b4d8f10f5f8f050ffc4fa396908c66e8b5cb0e539c891239809d5dd"
 
         def install
           bin.install "backrest"
+          bin.install "docker-entrypoint"
         end
       end
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/garethgeorge/backrest/releases/download/v1.11.2/backrest_Linux_armv6.tar.gz"
-        sha256 "80589e1af037d8ae1c72b2c39a6fc3893f20f70206bf3ebd51e4f92dfb3562e4"
+        url "https://github.com/garethgeorge/backrest/releases/download/v1.12.0/backrest_Linux_armv6.tar.gz"
+        sha256 "e70a95edde756dfdb3aaf6e96f20739cfeb5a36d8373feb224a02456c0f6f6d8"
 
         def install
           bin.install "backrest"
+          bin.install "docker-entrypoint"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/garethgeorge/backrest/releases/download/v1.11.2/backrest_Linux_arm64.tar.gz"
-        sha256 "404e69e8827eee78ca3ab39377e02b959cbdf300baf41fd7203a3a62b44d2f2a"
+        url "https://github.com/garethgeorge/backrest/releases/download/v1.12.0/backrest_Linux_arm64.tar.gz"
+        sha256 "0009ca3d2ae8751b3601129346210e5e8121ac6e76a883d83336d32aaf22122d"
 
         def install
           bin.install "backrest"
+          bin.install "docker-entrypoint"
         end
       end
     end
